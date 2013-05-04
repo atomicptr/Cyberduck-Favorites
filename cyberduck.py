@@ -4,7 +4,7 @@ import getpass
 import xml.etree.ElementTree as ET
 import Alfred
 
-handler = Alfred.Handler(sys.argv)
+handler = Alfred.Handler(sys.argv, use_no_query_string=False)
 
 f = open("cyberduck_settings_folder.txt", "r")
 settings_folder = f.read()
@@ -62,7 +62,7 @@ for info in bookmark_info:
 
 		i += 1
 
-	if handler.query.lower() in nickname.lower():
+	if handler.query == "" or handler.query.lower() in nickname.lower():
 		handler.add_new_item(title=nickname, subtitle="%s %s@%s:%s" % (protocol.upper(), username, hostname, port), icon="bookmark_icon.png", arg=file_path)
 
 handler.push()

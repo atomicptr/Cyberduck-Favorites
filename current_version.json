@@ -1,5 +1,5 @@
 {
-    "version": 0.1,
+    "version": 0.2,
     "download_url": "https://github.com/Kasoki/Cyberduck-Favorites/blob/master/Cyberduck Favorites.alfredworkflow?raw=true",
-    "description": "intial release"
+    "description": "make parameters optional and show all favorites if there is no parameter"
 }

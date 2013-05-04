@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.kasoki.alfredworkflows.cyberduckfavorites</string>
+	<key>connections</key>
+	<dict>
+		<key>B213DFE5-4AC9-4306-B40B-773350E74AF2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>94495C91-AA5C-46E7-80C0-1433DD81A0C1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>D7FCF320-611E-49DD-86AD-58F3AD54795C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>94495C91-AA5C-46E7-80C0-1433DD81A0C1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Christopher Kaster (@Kasoki)</string>
+	<key>description</key>
+	<string>Open a connection with Cyberduck favorites</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Cyberduck Favorites</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>connect</string>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>VAR=$(python cyberduck.py {query})
+
+echo $VAR</string>
+				<key>subtext</key>
+				<string>Connect to Cyberduck bookmark</string>
+				<key>title</key>
+				<string>Cyberduck</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D7FCF320-611E-49DD-86AD-58F3AD54795C</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>94495C91-AA5C-46E7-80C0-1433DD81A0C1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>ftp</string>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>VAR=$(python cyberduck.py {query})
+
+echo $VAR</string>
+				<key>subtext</key>
+				<string>Connect to Cyberduck bookmark</string>
+				<key>title</key>
+				<string>Cyberduck</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B213DFE5-4AC9-4306-B40B-773350E74AF2</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This workflow assumes that your Cyberduck settings folder is at:
+
+/Users/YOUR_USERNAME/Library/Application Support/Cyberduck
+
+if that is not the case please edit the "cyberduck_settings_folder.txt" file in the workflow folder</string>
+	<key>uidata</key>
+	<dict>
+		<key>94495C91-AA5C-46E7-80C0-1433DD81A0C1</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>B213DFE5-4AC9-4306-B40B-773350E74AF2</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>D7FCF320-611E-49DD-86AD-58F3AD54795C</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://kasoki.de</string>
+</dict>
+</plist>

@@ -65,4 +65,7 @@ for info in bookmark_info:
 	if handler.query == "" or handler.query.lower() in nickname.lower():
 		handler.add_new_item(title=nickname, subtitle="%s %s@%s:%s" % (protocol.upper(), username, hostname, port), icon="bookmark_icon.png", arg=file_path)
 
+if len(os.listdir(settings_folder)) == 0:
+	handler.add_new_item(title="No bookmarks found at", subtitle="%s" % settings_folder, icon="bookmark_icon.png")
+
 handler.push()
